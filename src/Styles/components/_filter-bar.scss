@@ -1,0 +1,22 @@
+.filter-bar {
+  padding-bottom: 30px;
+
+  &__list {
+    @extend %flex-wrap;
+  }
+
+  &__btn {
+    @include text__sm_filter;
+    @extend %button__filter-bar;
+
+    &:hover:not(.filter-bar__btn_active) {
+      @extend %button__filter-bar_hover;
+    }
+
+    &_active {
+      @extend %button__filter-bar_active;
+    }
+  }
+
+
+}

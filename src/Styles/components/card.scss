@@ -1,0 +1,40 @@
+.card {
+  &__img-container {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 65%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    min-height: 142px;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px;
+    gap: 7px;
+  }
+
+  &__text_timing {
+    @include text__sm_card-timing;
+  }
+
+  &__text_title {
+    @include text__sm_card-title;
+  }
+
+  &__text_descript {
+    @include text__sm_card-descript;
+  }
+
+}

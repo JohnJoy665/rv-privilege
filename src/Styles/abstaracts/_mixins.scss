@@ -1,0 +1,52 @@
+%text {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+}
+
+// LARGE TEXT
+%text__lg {
+  font-family: 'Playfair Display';
+  @extend %text;
+}
+
+@mixin text__lg_title {
+  font-size: 32px;
+  line-height: 43px;
+  color: $title-text-color;
+  @extend %text__lg;
+}
+
+// SMALL TEXT
+%text__sm {
+  font-family: 'PT Sans';
+  font-size: 14px;
+  line-height: 100%;
+  @extend %text;
+}
+
+@mixin text__sm_filter {
+  color: $main-text-color;
+  @extend %text__sm;
+}
+
+@mixin text__sm_card-timing {
+  font-size: 11px;
+  color: $main-text-color;
+  @extend %text__sm;
+}
+
+@mixin text__sm_card-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: $main-text-color;
+  @extend %text__sm;
+}
+
+@mixin text__sm_card-descript {
+  line-height: 16px;
+  font-size: 14px;
+  color: $main-text-color;
+  @extend %text__sm;
+}

@@ -1,0 +1,24 @@
+%button {
+  background-color: none;
+}
+
+%button__filter-bar {
+  @extend %button;
+  padding: 10px 40px;
+  background: #F9F9F9;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+%button__filter-bar_active {
+  @extend %button__filter-bar;
+  background-color: #FAD3E8;
+  cursor: default;
+}
+
+%button__filter-bar_hover {
+  @extend %button__filter-bar;
+  border: 1px solid #f7f7f7;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
+}
