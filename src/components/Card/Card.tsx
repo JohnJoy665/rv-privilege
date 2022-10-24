@@ -3,7 +3,7 @@ import cardImg from '../../img/cardImg.jpg'
 import privilegeDate from '../../models'
 
 interface cards {
-  card: privilegeDate;
+  cardProps: privilegeDate;
 }
 
 const Card = (props:cards) => {
@@ -13,9 +13,9 @@ const Card = (props:cards) => {
         <img className='card__img' src={cardImg} alt="Фоновая картинка" />
       </div>
       <div className="card__content">
-        <p className='card__text card__text_timing'>{props.card.date_stop}</p>
-        <p className='card__text card__text_title'>{props.card.name}</p>
-        <p className='card__text card__text_descript'>{props.card.description}</p>
+        <p className='card__text card__text_timing'>{props.cardProps.date_stop}</p>
+        <p className='card__text card__text_title'>{props.cardProps.name}</p>
+        <p className='card__text card__text_descript'>{props.cardProps.description}</p>
       </div>
     </div>
   )

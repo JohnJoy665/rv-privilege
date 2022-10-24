@@ -5,7 +5,7 @@ import privilegeDate from '../../models'
 
 const CardContainer = () => {
   const cards = cardData.map((item:privilegeDate) => {
-    return <Card card={item} key={item.id}/>
+    return <Card cardProps={item} key={item.id}/>
   })
   return (
     <div className='card-container'>
