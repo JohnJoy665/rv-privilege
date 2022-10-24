@@ -1,4 +1,3 @@
-import React from 'react';
 import cardImg from '../../img/cardImg.jpg'
 import privilegeDate from '../../models'
 
