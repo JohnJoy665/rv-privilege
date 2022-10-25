@@ -45,7 +45,39 @@ const data: privilegeDate[] = [
       { fio: '', number: '89032030699', email: 'corpmanager13@xfit.ru' },
     ],
     turnOn: true
-  },
+  },{
+    id: '4',
+    name: 'тестовая карточка',
+    description: 'Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание',
+    dateStop: '31.12.2023',
+    category: 'Тестовая категория очень длинная',
+    term: 'Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)',
+    img: 'https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg',
+    docs: [
+      { nameDoc: 'Скачать презентацию X-Fit', url: '' },
+      { nameDoc: 'Скачать предложение', url: 'https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf' },
+    ],
+    contacts: [
+      { fio: '', number: '89032030699', email: 'corpmanager13@xfit.ru' },
+    ],
+    turnOn: true
+  },{
+    id: '5',
+    name: 'тестовая карточка',
+    description: 'Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание',
+    dateStop: '31.12.2023',
+    category: 'Rendez-Vous',
+    term: 'Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)',
+    img: 'https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg',
+    docs: [
+      { nameDoc: 'Скачать презентацию X-Fit', url: '' },
+      { nameDoc: 'Скачать предложение', url: 'https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf' },
+    ],
+    contacts: [
+      { fio: '', number: '89032030699', email: 'corpmanager13@xfit.ru' },
+    ],
+    turnOn: true
+  }
 ]
 
 export default data;

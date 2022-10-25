@@ -6,6 +6,9 @@
   }
 
   &__btn {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
     @include text__sm_filter;
     @extend %button__filter-bar;
 

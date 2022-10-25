@@ -12,7 +12,7 @@ const Card = ({card}: cardProps) => {
         <img className='card__img' src={cardImg} alt="Фоновая картинка" />
       </div>
       <div className="card__content">
-        <p className='card__text card__text_timing'>{card.dateStop}</p>
+        <p className='card__text card__text_timing'>{card.dateStop === '' ? 'БЕССРОЧНО' : card.dateStop }</p>
         <p className='card__text card__text_title'>{card.name}</p>
         <p className='card__text card__text_descript'>{card.description}</p>
       </div>
