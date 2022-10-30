@@ -1,39 +1,46 @@
-import { useEffect, useState } from 'react'
-import data from '../../data/cards'
-import FilterButton from '../FilterButton/FilterButton'
+import { useEffect, useState } from "react";
+import cardData from "../../data/cards";
+import FilterButton from "../FilterButton/FilterButton";
 
-const FilterBar = ({filterValue}:{filterValue:any}) => {
-  const allFilters: any = data.reduce((p, c) => p.add(c.category), new Set())
-  const arrCat: string[] = [...allFilters]
+interface FilterBarProps {
+  filterValue(e: string): void
+}
 
-  const [activeElement, setActiveElement] = useState(arrCat[0]);
+const FilterBar = ({filterValue}: FilterBarProps) => {
 
+  const uniqFiltersArr = cardData.reduce((acc, elem) => {
+    const result = acc.includes(elem.category) || acc.push(elem.category);
+    return result;
+  });
+
+
+  const [activeElement, setActiveElement] = useState(uniqFiltersArr[0]);
 
   useEffect(() => {
-    filterValue(activeElement)
-  },[activeElement])
+    filterValue(activeElement);
+  },[activeElement]);
 
 
   const handleClick = (id: string) => {
     if (activeElement !== id) {
-      setActiveElement(id)
+      setActiveElement(id);
     }
-  }
+  };
 
   return (
     <div className='filter-bar'>
       <ul className='filter-bar__list'>
-        {arrCat.map((item, index, arr) => {
+        {uniqFiltersArr.map((item) => {
           return <FilterButton
             key={item}
             id={item}
             activeElement={activeElement}
             handleClick={handleClick}
-          />
+          />;
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default FilterBar;

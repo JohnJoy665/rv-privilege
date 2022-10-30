@@ -1,7 +1,7 @@
 interface Idocument {
   nameDoc?: string,
   url?: string
-};
+}
 interface Icontacts {
   fio?: string,
   number?: string,

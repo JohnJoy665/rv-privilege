@@ -5,13 +5,13 @@ type props = {
 };
 
 const FilterButton = ({id, activeElement, handleClick}:props) => {
-  const isActive = id === activeElement ? true : false
+  const isActive = id === activeElement ? true : false;
 
   return (
-    <div onClick={() => handleClick(id)} className={`filter-bar__btn ${isActive && 'filter-bar__btn_active'}`}>
+    <div onClick={() => handleClick(id)} className={`filter-bar__btn ${isActive ? "filter-bar__btn_active" : ""}`}>
       {id}
     </div>
-  )
-}
+  );
+};
 
 export default FilterButton;
