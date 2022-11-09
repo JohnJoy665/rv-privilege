@@ -6,38 +6,34 @@ interface FilterBarProps {
   filterValue(e: string): void
 }
 
-const FilterBar = ({filterValue}: FilterBarProps) => {
+const FilterBar = ({ filterValue }: FilterBarProps) => {
 
-  const uniqFiltersArr = cardData.reduce((acc, elem) => {
-    const result = acc.includes(elem.category) || acc.push(elem.category);
-    return result;
-  });
-
+  const uniqFiltersArr = cardData.reduce((acc: string[], elem) => {
+    if (!acc.includes(elem.category)) acc.push(elem.category);
+    return acc;
+  }, []);
 
   const [activeElement, setActiveElement] = useState(uniqFiltersArr[0]);
 
   useEffect(() => {
     filterValue(activeElement);
-  },[activeElement]);
-
+  }, [activeElement]);
 
   const handleClick = (id: string) => {
-    if (activeElement !== id) {
-      setActiveElement(id);
-    }
+    activeElement !== id && setActiveElement(id);
   };
 
   return (
     <div className='filter-bar'>
       <ul className='filter-bar__list'>
-        {uniqFiltersArr.map((item) => {
-          return <FilterButton
+        {uniqFiltersArr.map((item) => (
+          <FilterButton
             key={item}
             id={item}
             activeElement={activeElement}
             handleClick={handleClick}
-          />;
-        })}
+          />
+        ))}
       </ul>
     </div>
   );

@@ -1,7 +1,7 @@
 type props = {
   id: string,
   activeElement: string,
-  handleClick: any
+  handleClick: (e: string) => void
 };
 
 const FilterButton = ({id, activeElement, handleClick}:props) => {

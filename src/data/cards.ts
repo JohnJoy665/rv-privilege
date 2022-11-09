@@ -1,4 +1,4 @@
-import IprivilegeDatа from "../interfaces/models";
+import {IprivilegeDatа} from "../interfaces/models";
 const data: IprivilegeDatа[] = [
   {
     id: "1",
@@ -22,9 +22,7 @@ const data: IprivilegeDatа[] = [
     category: "Rendez-Vous",
     term: "Бланк необходимо распечатать, заполнить и отнести на КПП рядом со шлагбаумом до 12:00. Все заявки поданные до 12:00 будут обработаны день в день, позднее - на следующий день. Стоимость автомойки вычитается из заработной платы автоматически",
     img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
-    docs: [
-      { nameDoc: "Скачать бланк", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
-    ],
+    docs: [],
     contacts: [
       { fio: "Кирдянкина Лилия", number: "1234", email: "L.Kirdyankina@rendez-vous.ru" },
     ],
@@ -42,7 +40,10 @@ const data: IprivilegeDatа[] = [
       { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
     ],
     contacts: [
-      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+      { fio: "Ольга Владимировна", number: "89032030699", email: "corpmanager13@xfit.ru" },
+      { fio: "Ольга владимировна 2", number: "89032030699", email: "corpmanager13@xfit.ru" },
+      { fio: "Ольга Владимировна 3", number: "89032030699", email: "corpmanager13@xfit.ru" },
+      { fio: "Ольга Владимировна 4", number: "89032030699", email: "corpmanager13@xfit.ru" },
     ],
     turnOn: true
   },{
@@ -63,6 +64,102 @@ const data: IprivilegeDatа[] = [
     turnOn: true
   },{
     id: "5",
+    name: "тестовая карточка",
+    description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
+    dateStop: "31.12.2023",
+    category: "Rendez-Vous",
+    term: "Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)",
+    img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
+    docs: [
+      { nameDoc: "Скачать презентацию X-Fit", url: "" },
+      { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
+    ],
+    contacts: [
+      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+    ],
+    turnOn: true
+  },{
+    id: "6",
+    name: "тестовая карточка",
+    description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
+    dateStop: "31.12.2023",
+    category: "Rendez-Vous",
+    term: "Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)",
+    img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
+    docs: [
+      { nameDoc: "Скачать презентацию X-Fit", url: "" },
+      { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
+    ],
+    contacts: [
+      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+    ],
+    turnOn: true
+  },{
+    id: "7",
+    name: "тестовая карточка",
+    description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
+    dateStop: "31.12.2023",
+    category: "Rendez-Vous",
+    term: "Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)",
+    img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
+    docs: [
+      { nameDoc: "Скачать презентацию X-Fit", url: "" },
+      { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
+    ],
+    contacts: [
+      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+    ],
+    turnOn: true
+  },{
+    id: "8",
+    name: "тестовая карточка",
+    description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
+    dateStop: "31.12.2023",
+    category: "Rendez-Vous",
+    term: "Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)",
+    img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
+    docs: [
+      { nameDoc: "Скачать презентацию X-Fit", url: "" },
+      { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
+    ],
+    contacts: [
+      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+    ],
+    turnOn: true
+  },{
+    id: "9",
+    name: "тестовая карточка",
+    description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
+    dateStop: "31.12.2023",
+    category: "Rendez-Vous",
+    term: "Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)",
+    img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
+    docs: [
+      { nameDoc: "Скачать презентацию X-Fit", url: "" },
+      { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
+    ],
+    contacts: [
+      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+    ],
+    turnOn: true
+  },{
+    id: "10",
+    name: "тестовая карточка",
+    description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
+    dateStop: "31.12.2023",
+    category: "Rendez-Vous",
+    term: "Можно получить по мордасам, если так себя вести... ты, тупой ублюдок. Шутка)",
+    img: "https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.jpg",
+    docs: [
+      { nameDoc: "Скачать презентацию X-Fit", url: "" },
+      { nameDoc: "Скачать предложение", url: "https://www.xeroxscanners.com/downloads/Manuals/XMS/PDF_Converter_Pro_Quick_Reference_Guide.RU.pdf" },
+    ],
+    contacts: [
+      { fio: "", number: "89032030699", email: "corpmanager13@xfit.ru" },
+    ],
+    turnOn: true
+  },{
+    id: "11",
     name: "тестовая карточка",
     description: "Здесь например очень много текста чтобы узнать сколько максимум его может быть. Всем спасибо за внимание",
     dateStop: "31.12.2023",

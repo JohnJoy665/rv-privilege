@@ -10,12 +10,16 @@
 './layout/flex';
 
 @import
+'./components/icon.scss',
 './components/app',
 './components/title-page',
 './components/filter-bar',
 './components/buttons',
 './components/card-container',
-'./components/card.scss';
+'./components/card.scss',
+'./components/modal.scss',
+'./components/Paragraph.scss',
+'./components/IconContainer.scss';
 
 
 @import

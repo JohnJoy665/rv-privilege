@@ -1,13 +1,15 @@
 import cardImg from "../../img/cardImg.jpg";
-import IprivilegeDatа from "../../interfaces/models";
+import {IprivilegeDatа} from "../../interfaces/models";
 
 interface CardProps {
   card: IprivilegeDatа;
+  handleClick: (event: React.MouseEvent<HTMLElement>, card: IprivilegeDatа) => void;
 }
 
-const Card = ({ card }: CardProps) => {
+const Card = ({ card, handleClick }: CardProps) => {
+
   return (
-    <div className='card'>
+    <div onClick={(e) => handleClick(e, card)} className='card'>
       <div className="card__img-container">
         <img className='card__img' src={cardImg} alt="Фоновая картинка" />
       </div>

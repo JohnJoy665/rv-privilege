@@ -1,14 +1,15 @@
-interface Idocument {
+export interface Idocument {
   nameDoc?: string,
   url?: string
 }
-interface Icontacts {
+export interface Icontacts {
   fio?: string,
   number?: string,
   email?: string
 }
 
-interface IprivilegeDatа {
+export interface IprivilegeDatа {
+  key?: string
   id: string,
   name: string,
   description: string,
@@ -17,8 +18,8 @@ interface IprivilegeDatа {
   term: string,
   img: string,
   docs: Idocument[],
-  contacts?: Icontacts[],
+  contacts: Icontacts[],
   turnOn: boolean
 }
 
-export default IprivilegeDatа;
+// export default IprivilegeDatа;
