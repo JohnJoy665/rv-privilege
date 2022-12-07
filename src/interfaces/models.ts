@@ -15,7 +15,7 @@ export interface IprivilegeDatа {
   description: string,
   dateStop: string,
   category: string,
-  term: string,
+  specification: string,
   img: string,
   docs: Idocument[],
   contacts: Icontacts[],

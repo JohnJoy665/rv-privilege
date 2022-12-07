@@ -6,7 +6,6 @@
   line-height: 16px;
   align-items: center;
   letter-spacing: 0.011em;
-  padding-bottom: 30px;
 
   &__title {
     font-family: 'PT Sans Caption';
@@ -34,5 +33,9 @@
     color: #3A3A3A;
     display: flex;
     align-items: start;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 30px;
   }
 }

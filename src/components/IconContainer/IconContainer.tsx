@@ -2,12 +2,14 @@ import { Icon } from "@iconify/react";
 
 interface IconContainerProps {
   icon: string;
+  sizeWidth: string;
+  sizeHeight: string;
 }
 
-const IconContainer = ({icon}: IconContainerProps) => {
+const IconContainer = ({icon, sizeWidth, sizeHeight}: IconContainerProps) => {
   return (
-    <div className="IconContainer_modalParagraph">
-      <Icon icon={icon} width="13" height="13" />
+    <div className="IconContainer">
+      <Icon icon={icon} width={sizeWidth} height={sizeHeight} />
     </div>
   );
 };

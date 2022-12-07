@@ -1,4 +1,4 @@
-import Card from "../Card/Card";
+import Card from "../СardPrivilege/СardPrivilege";
 import cardData from "../../data/cards";
 import {IprivilegeDatа} from "../../interfaces/models";
 

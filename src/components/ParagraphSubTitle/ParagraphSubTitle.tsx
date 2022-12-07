@@ -8,7 +8,7 @@ interface ParagraphSubTitleProps {
 const ParagraphSubTitle = ({icon}: ParagraphSubTitleProps) => {
   return (
     <div className="Paragraph__sub-title">
-      <IconContainer icon={icon}/>
+      <IconContainer icon={icon} sizeWidth={"13"} sizeHeight={"13"}/>
       Елена Викторовна Золотозуб
     </div>
   );

@@ -11,7 +11,7 @@ interface ParagraphLink {
 const ParagraphLink = ({docName, docHref, icon}: ParagraphLink) => {
   return (
     <a href="" className="Paragraph__link">
-      {icon && <IconContainer icon={icon} />}
+      {icon && <IconContainer icon={icon}  sizeWidth={"13"} sizeHeight={"13"}/>}
       {docName}
     </a>
   );

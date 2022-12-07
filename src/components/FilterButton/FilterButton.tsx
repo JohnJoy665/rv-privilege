@@ -1,10 +1,10 @@
-type props = {
+interface FilterButtinProps {
   id: string,
   activeElement: string,
   handleClick: (e: string) => void
-};
+}
 
-const FilterButton = ({id, activeElement, handleClick}:props) => {
+const FilterButton = ({id, activeElement, handleClick}: FilterButtinProps) => {
   const isActive = id === activeElement ? true : false;
 
   return (

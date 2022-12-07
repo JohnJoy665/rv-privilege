@@ -1,6 +1,10 @@
 .IconContainer {
+  padding-right: 10px;
+}
 
-  &_modalParagraph {
-    padding-right: 10px;
-  }
+.IconContainer:active,
+:hover,
+:focus {
+  outline: 0;
+  // border: none
 }
