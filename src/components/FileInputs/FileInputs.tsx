@@ -18,21 +18,9 @@ interface FileInputsProps {
   getValues: UseFormGetValues<UserSubmitForm>
 }
 
-const FileInputs = ({ errors, control }: FileInputsProps) => {
-
-  const validateTypeOfFile = (v: any[]): boolean => {
-    // const result = v.every((item) => {
-    //   const indexFile = item.name.split(".")[item.name.split(".").length - 1];
-    //   const result = indexFile === "docx" || indexFile === "doc" || indexFile === "docx" || indexFile === "xlsx" || indexFile === "pptx";
-    //   console.log(result);
-    //   return result;
-    // });
-    // return result;
-    return true;
-  };
-
+const FileInputs = ({ control }: FileInputsProps) => {
   const {
-    field: { onChange, value, name },
+    field: { onChange, value },
     fieldState: { error },
   } = useController({
     control,
@@ -43,60 +31,40 @@ const FileInputs = ({ errors, control }: FileInputsProps) => {
         message: "required",
         value: true,
       },
-      validate: (v) => validateTypeOfFile(v)
-      // validate: {
-      //   typeOfFile: value => validateTypeOfFile(value)
-      // }
     },
   });
 
   return (
-    <div className="modal__formItem">
-      <label className="modal__input modal__input_files" htmlFor="formId">
+    <div>
+      <label>
+        заполни меня
         <input
-          id="formId"
-          hidden
           type={"file"}
           multiple
-          name={name}
+          name={"uploadFile"}
           onChange={(e) => {
             if (e.target?.files?.[0]) {
               if (value?.length) {
-                console.log("Тест1");
                 return onChange([...value, ...Array.from(e.target.files)]);
               }
-              console.log("Тест2");
               return onChange([e.target.files[0]]);
             }
           }}
         />
-        Добавить файл
       </label>
-      <span className={`${errors["uploadFile"] ? "modal__input-limit_error" : "modal__input-limit"}`}>{
-        errors["uploadFile"]
-          ? errors["uploadFile"]?.type === "typeOfFile"
-            ? "Недопустисмый тип файла"
-            : "Неизвестная ошибка"
-          : "pdf, excel, pptx"
-      }</span>
+
+      {error?.message && (
+        <span
+          style={{
+            color: "red",
+          }}
+        >
+          {error.message}
+        </span>
+      )}
+      {value?.map(({ name }) => name).join(", ")}
     </div>
   );
-
-
-
-
-  // return (
-  //   <div className="modal__formItem">
-  //     <label className="modal__input modal__input_files" htmlFor="formId">
-
-
-
-
-  //       Добавить файл
-  //     </label>
-  //     <span className="modal__input-limit">pdf, excel, pptx</span>
-  //   </div>
-  // );
 };
 
 export default FileInputs;
