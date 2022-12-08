@@ -14,10 +14,8 @@
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.40.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "react-hook-form": "^7.4.0",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -49,7 +47,6 @@
     "@typescript-eslint/parser": "^5.41.0",
     "eslint": "^8.26.0",
     "eslint-plugin-react": "^7.31.10",
-    "react-vt": "^0.1.1",
     "typescript": "^4.8.4"
   }
 }

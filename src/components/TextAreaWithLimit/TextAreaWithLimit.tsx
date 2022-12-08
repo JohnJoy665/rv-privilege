@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
-import { UseFormWatch, FieldErrorsImpl, UseFormSetValue, Path, UseFormSetError, Control, Controller, UseFormReset } from "react-hook-form";
+import { UseFormWatch, FieldErrors, UseFormSetValue, Path, UseFormSetError, Control, Controller, UseFormReset } from "react-hook-form";
 import useAutosizeTextArea from "../../hooks/useAutosizeTextArea";
 import { UserSubmitForm } from "../../interfaces/inputs";
 
 interface TextAreaWithLimitProps {
   watch: UseFormWatch<UserSubmitForm>;
   setValue: UseFormSetValue<UserSubmitForm>
-  errors: Partial<FieldErrorsImpl<UserSubmitForm>>
+  errors: Partial<FieldErrors<UserSubmitForm>>
   name: Path<{title: string, category: string, description: string, specification: string}>;
   placeholder: string;
   limit: number;
@@ -67,8 +67,8 @@ const TextAreaWithLimit = ({
         }}
         render={({ field: { ref, ...field } }) => (
           <textarea {...field}
-            ref={(e) => {
-              ref(e);
+            ref={(e: HTMLTextAreaElement | null) => {
+              // ref(e);
               firstNameRef.current = e;
             }}
             rows={1}
