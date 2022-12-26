@@ -4,12 +4,13 @@ interface IconContainerProps {
   icon: string;
   sizeWidth: string;
   sizeHeight: string;
+  color?: string;
 }
 
-const IconContainer = ({icon, sizeWidth, sizeHeight}: IconContainerProps) => {
+const IconContainer = ({icon, sizeWidth, sizeHeight, color}: IconContainerProps) => {
   return (
     <div className="IconContainer">
-      <Icon icon={icon} width={sizeWidth} height={sizeHeight} />
+      <Icon icon={icon} color={color} width={sizeWidth} height={sizeHeight} />
     </div>
   );
 };
