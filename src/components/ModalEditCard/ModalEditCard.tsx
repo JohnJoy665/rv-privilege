@@ -3,6 +3,7 @@ import { UserSubmitForm } from "../../interfaces/inputs";
 import cardImg from "../../img/cardImg2.png";
 import TextAreaWithLimit from "../../components/TextAreaWithLimit/TextAreaWithLimit";
 import FileInputs from "../FileInputs/FileInputs";
+import FieldsArrayInput from "../FieldsArrayInput/FieldsArrayInput";
 // import FileInputsTest from "../FileInputs/FileInputsTest";
 
 interface ModalEditCardProps {
@@ -17,7 +18,8 @@ const ModalEditCard = ({ open }: ModalEditCardProps) => {
       category: "",
       description: "",
       specification: "",
-      uploadFile: []
+      uploadFile: [],
+      contactsArray: [ { fio: "", number: "", email: "" } ]
     },
     mode: "onChange"
   });
@@ -83,6 +85,7 @@ const ModalEditCard = ({ open }: ModalEditCardProps) => {
               label="File Upload" 
               open={open}
             />
+            <FieldsArrayInput />
           </div>
           <input type="submit" />
           <div className="modal__img">

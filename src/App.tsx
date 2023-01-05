@@ -6,7 +6,7 @@ import Modal from "./components/Modal/Modal";
 import Title from "./components/Title/Title";
 import ModalShowCard from "./components/ModalShowCard/ModalShowCard";
 import { UseModalState } from "./hooks/UseModalState";
-import {IprivilegeDatа} from "./interfaces/models";
+import { IprivilegeDatа } from "./interfaces/models";
 import ModalEditCard from "./components/ModalEditCard/ModalEditCard";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   const [cardData, setcardData] = useState<IprivilegeDatа | undefined>(undefined);
   const { isOpen, onOpen, onClose } = UseModalState();
 
-  const setFilter = (activeElement:string) => {
+  const setFilter = (activeElement: string) => {
     setNewFilter(activeElement);
   };
 
@@ -30,10 +30,10 @@ function App() {
         <Title />
         <FilterBar filterValue={setFilter} />
         <CardContainer handleClick={setModalCard} newFilter={newFilter} />
-        {cardData && 
-        <Modal dataCard={cardData} handleClose={onClose} open={isOpen} >
-          {isAdmin ? <ModalEditCard open={isOpen} /> : <ModalShowCard dataCard={cardData} />}
-        </Modal>
+        {cardData && isOpen ?
+          <Modal dataCard={cardData} handleClose={onClose} open={isOpen} >
+            {isAdmin ? <ModalEditCard open={isOpen} /> : <ModalShowCard dataCard={cardData} />}
+          </Modal> : null
         }
       </div>
     </>

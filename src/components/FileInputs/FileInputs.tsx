@@ -28,7 +28,7 @@ const FileInputs = ({ name, label, open }: testReactHookFormProps) => {
   );
 
   const doubleFile = (file: File, allFiles: File[]) => {
-    console.log(allFiles);
+    // console.log(allFiles);
     const isDouble = allFiles.some((item) => {
       return item.name === file.name;
     });
@@ -79,9 +79,6 @@ const FileInputs = ({ name, label, open }: testReactHookFormProps) => {
   }, [allFiles]);
 
   useEffect(() => {
-    console.log(open);
-    console.log("files from watch", files);
-    console.log("allFiles from useState", allFiles);
     setAllFiles([]);
     acceptedFiles;
     reset();
