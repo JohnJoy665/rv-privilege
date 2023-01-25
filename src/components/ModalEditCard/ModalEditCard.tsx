@@ -4,13 +4,14 @@ import cardImg from "../../img/cardImg2.png";
 import TextAreaWithLimit from "../../components/TextAreaWithLimit/TextAreaWithLimit";
 import FileInputs from "../FileInputs/FileInputs";
 import FieldsArrayInput from "../FieldsArrayInput/FieldsArrayInput";
-// import FileInputsTest from "../FileInputs/FileInputsTest";
+import ImageInput from "../ImageInput/ImageInput";
 
 interface ModalEditCardProps {
   open: boolean;
+  handleClose: () => void;
 }
 
-const ModalEditCard = ({ open }: ModalEditCardProps) => {
+const ModalEditCard = ({ open, handleClose }: ModalEditCardProps) => {
 
   const methods = useForm<UserSubmitForm>({
     defaultValues: {
@@ -19,12 +20,16 @@ const ModalEditCard = ({ open }: ModalEditCardProps) => {
       description: "",
       specification: "",
       uploadFile: [],
-      contactsArray: [ { fio: "", number: "", email: "" } ]
+      contactsArray: [{ fio: "", number: "", email: "" }],
+      uploadImg: []
     },
     mode: "onChange"
   });
 
-  const onSubmit: SubmitHandler<UserSubmitForm> = data => console.log("Отправка формы", data);
+  const onSubmit: SubmitHandler<UserSubmitForm> = (data) => {
+    console.log("Отправка формы", data);
+    handleClose();
+  };
 
 
   return (
@@ -82,16 +87,19 @@ const ModalEditCard = ({ open }: ModalEditCardProps) => {
             />
             <FileInputs
               name="uploadFile"
-              label="File Upload" 
+              label="File Upload"
               open={open}
             />
             <FieldsArrayInput />
           </div>
-          <input type="submit" />
           <div className="modal__img">
-            <img src={cardImg} alt="" />
+            <ImageInput 
+              name="uploadImg"
+            />
+            {/* <img src={cardImg} alt="" /> */}
           </div>
         </div>
+        <input type="submit" />
       </form>
     </FormProvider>
   );

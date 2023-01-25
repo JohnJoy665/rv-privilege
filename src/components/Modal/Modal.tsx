@@ -10,11 +10,12 @@ interface ModalProps {
   children: React.ReactNode
 }
 const Modal = ({ open, handleClose, dataCard, children }: ModalProps) => {
-  if (open) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "unset";
-  }
+  // if (open) {
+  //   document.body.style.overflow = "hidden";
+  // } else {
+  //   console.log("хуй");
+  //   document.body.style.overflow = "unset";
+  // }
   
   return (
     <div className={`modal ${open ? "modal_visible" : ""}`} onClick={handleClose}>

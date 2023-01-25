@@ -4,5 +4,6 @@ export interface UserSubmitForm {
   description: string;
   specification: string;
   uploadFile: File[];
-  contactsArray: [{fio: string, number: string, email: string}]
+  contactsArray: [{fio: string, number: string, email: string}],
+  uploadImg: File[]
 }

@@ -4,20 +4,17 @@ import { Accept, useDropzone } from "react-dropzone";
 import { useFormContext } from "react-hook-form";
 import IconContainer from "../IconContainer/IconContainer";
 
-interface testReactHookFormProps {
+interface fileInputsProps {
   name: string;
   label: string;
   open: boolean;
 }
 
-const FileInputs = ({ name, label, open }: testReactHookFormProps) => {
+const FileInputs = ({ name, label, open }: fileInputsProps) => {
   const [allFiles, setAllFiles] = useState<File[]>([]);
   const { register, unregister, setValue, watch, formState, reset } = useFormContext();
   const files = watch("uploadFile");
-  const errors = formState.errors;
-  // console.log(files);
-  // console.log(allFiles);
-  // console.log(errors);
+  // const errors = formState.errors;
   const onDrop = useCallback(
     (droppedFiles: File[]) => {
       Array.from(droppedFiles).map((file: File) => {
@@ -28,7 +25,6 @@ const FileInputs = ({ name, label, open }: testReactHookFormProps) => {
   );
 
   const doubleFile = (file: File, allFiles: File[]) => {
-    // console.log(allFiles);
     const isDouble = allFiles.some((item) => {
       return item.name === file.name;
     });

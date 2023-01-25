@@ -36,7 +36,7 @@ const FieldsArrayInput = () => {
                   // required: { value: getValues(`contactsArray.${index}.email`) || getValues(`contactsArray.${index}.number`) ? true : false, message: "Добавьте имя контакта" },
                   required: { value: getValues(`contactsArray.${index}.email`) || getValues(`contactsArray.${index}.number`) ? true : false, message: "Добавьте имя контакта" },
                   maxLength: {
-                    value: 5,
+                    value: 50,
                     message: "Стоит ограничение 50 символов"
                   }
                 })

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./app.scss";
 import CardContainer from "./components/CardContainer/CardContainer";
 import FilterBar from "./components/FilterBar/FilterBar";
@@ -19,6 +19,14 @@ function App() {
     setNewFilter(activeElement);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
+
   const setModalCard = (e: React.MouseEvent<HTMLElement>, cardData: IprivilegeDatа) => {
     setcardData(cardData);
     onOpen();
@@ -32,7 +40,7 @@ function App() {
         <CardContainer handleClick={setModalCard} newFilter={newFilter} />
         {cardData && isOpen ?
           <Modal dataCard={cardData} handleClose={onClose} open={isOpen} >
-            {isAdmin ? <ModalEditCard open={isOpen} /> : <ModalShowCard dataCard={cardData} />}
+            {isAdmin ? <ModalEditCard open={isOpen} handleClose={onClose} /> : <ModalShowCard dataCard={cardData} />}
           </Modal> : null
         }
       </div>
